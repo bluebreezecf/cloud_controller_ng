@@ -28,6 +28,7 @@ module VCAP::CloudController
               droplet.state                  = DropletModel::STAGED_STATE
               droplet.buildpack_guid         = buildpack.guid if buildpack
               droplet.detected_start_command = staging_result.detected_start_command
+              droplet.effective_procfile     = staging_result.effective_procfile
               droplet.save
             end
           end

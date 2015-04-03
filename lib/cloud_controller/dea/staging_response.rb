@@ -24,6 +24,10 @@ module VCAP::CloudController::Dea
       @response['detected_start_command']
     end
 
+    def detected_start_command
+      @response['effective_procfile']
+    end
+
     def droplet_hash
       @response['droplet_sha1']
     end
